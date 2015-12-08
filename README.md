@@ -1,4 +1,10 @@
-A customized ```centos/7``` image created for PHP development. Optimized for performance and low memory usage. Runs 3 PHP versions simultaneously. Supports automatic updates.
+## Vnnpro
+
+A customized ```centos/7``` image created for PHP development. Optimized for performance and low memory usage. Runs multiple PHP versions simultaneously. Supports automatic updates and has a persistent MySQL storage out of the box.
+
+USE WITH CAUTION AND HAVE BACKUPS
+
+VNNPRO IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND
 
 ## What's inside
 
@@ -65,7 +71,7 @@ vagrant halt
 
 Remove:
 
-*For example, if you broke something. Vnnpro has been created to be completely disposable, after ```vagrant up``` you should be back to business in seconds*
+*For example, if you broke something. Vnnpro has been created to be completely disposable, after ```vagrant up``` you should be back to business in seconds without losing your sites or databases.*
 ```
 vagrant destroy
 ```
@@ -150,6 +156,8 @@ sudo su
 *This can be useful to make the changes permanent, surviving a ```vagrant destroy``` and image updates.*
 
 Create the following directory structure. Everything contained in ```vagrant-bootstrap/etc``` will be ```rsync```'ed to Vnnpro.
+
+Basically, ```vagrant-bootstrap/etc``` on host maps to ```/etc``` on guest.
 
 ```
 - vnnpro
