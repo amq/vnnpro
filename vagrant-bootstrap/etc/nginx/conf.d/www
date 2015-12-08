@@ -1,0 +1,28 @@
+# A wildcard virtual host
+# Do not modify
+# Instead, create a separate file like "custom-site.com"
+
+server {
+        listen 80; # default
+        listen 443 ssl; # default
+        listen 8000; # hhvm
+        listen 8005; # php55
+        listen 8007; # php70
+
+        server_name ~^(www\.|dev\.|vagrant\.|hhvm\.|php55\.|php70\.)?(?<domain>.+)$;
+        root /home/vagrant/sync/$domain/htdocs;
+        access_log /var/log/nginx/access.log main;
+
+        ssl_certificate /etc/nginx/ssl/own.crt;
+        ssl_certificate_key /etc/nginx/ssl/own.key;
+
+        include common.conf;
+        include try.conf;
+        include php.conf;
+
+        location ~ /(app|downloader|includes|pkginfo|var|errors/local.xml)/ {
+                deny all;
+        }
+
+        # expires $expires;
+}

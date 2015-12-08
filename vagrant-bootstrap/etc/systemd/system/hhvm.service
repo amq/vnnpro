@@ -1,0 +1,8 @@
+[Unit]
+Description=HipHop Virtual Machine (FCGI)
+
+[Service]
+ExecStart=/usr/bin/hhvm -c /etc/hhvm/server.ini -c /etc/hhvm/php.ini --user vagrant --mode daemon
+
+[Install]
+WantedBy=multi-user.target

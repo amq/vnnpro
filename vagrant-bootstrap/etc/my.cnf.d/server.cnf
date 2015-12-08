@@ -1,0 +1,40 @@
+[server]
+
+datadir                 = /var/lib/mysql
+
+skip_external_locking
+skip_name_resolve
+
+collation_server        = utf8_unicode_ci
+init_connect            = 'SET NAMES utf8'
+character_set_server    = utf8
+
+max_connections         = 20
+thread_cache_size       = 20
+query_cache_type        = 1
+query_cache_limit       = 1M
+query_cache_size        = 64M
+key_buffer_size         = 64M
+max_allowed_packet      = 64M
+tmp_table_size          = 64M
+max_heap_table_size     = 64M
+table_open_cache        = 8192
+table_definition_cache  = 8192
+sort_buffer_size        = 2M
+read_rnd_buffer_size    = 2M
+group_concat_max_len    = 2M
+join_buffer_size        = 2M
+low_priority_updates    = 1
+transaction_isolation   = READ-COMMITTED
+binlog_format           = ROW
+innodb_flush_method     = O_DIRECT
+innodb_buffer_pool_size = 128M
+innodb_log_buffer_size  = 8M
+innodb_lock_wait_timeout = 100
+innodb_flush_log_at_trx_commit = 2
+innodb_buffer_pool_instances = 4
+innodb_file_per_table   = 1
+slow_query_log          = 1
+long_query_time         = 1
+slow_query_log_file     = /var/log/mariadb/slow.log
+log_error               = /var/log/mariadb/mariadb.log

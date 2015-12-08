@@ -1,0 +1,24 @@
+[remi]
+name=remi
+#baseurl=http://rpms.remirepo.net/enterprise/7/remi/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/7/remi/mirror
+gpgkey=http://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgcheck=1
+enabled=1
+
+[remi-php55]
+name=remi-php55
+# WARNING: If you enable this repository, you must also enable "remi"
+#baseurl=http://rpms.remirepo.net/enterprise/7/php55/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/7/php55/mirror
+gpgkey=http://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgcheck=1
+enabled=1
+
+[remi-safe]
+name=remi-safe
+#baseurl=http://rpms.remirepo.net/enterprise/7/safe/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/7/safe/mirror
+gpgkey=http://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgcheck=1
+enabled=1

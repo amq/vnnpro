@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!vagrant-bootstrap/**
+!/Vagrantfile
+!/README.md
+!*/

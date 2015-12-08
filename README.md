@@ -9,7 +9,7 @@ VNNPRO IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND
 ## What's inside
 
 ```
-CentOS 7 v1509.01
+CentOS 7 1509.01
 Nginx 1.8.0
 PHP-FPM 5.5.30
 PHP-FPM 7.0.0
@@ -71,7 +71,7 @@ vagrant halt
 
 Remove:
 
-*For example, if you broke something. Vnnpro has been created to be completely disposable, after ```vagrant up``` you should be back to business in seconds without losing your sites or databases.*
+*Useful if you need to start from a clean image. Vnnpro has been created to be completely disposable, after ```vagrant up``` you should be back to business in seconds without losing your sites or databases.*
 ```
 vagrant destroy
 ```
@@ -89,7 +89,7 @@ Vnnpro expects the following directory structure:
         - htdocs
 ```
 
-There is no need to create virtual hosts for Nginx. Simply add a directory and Vnnpro will automatically respond on:
+There is no need to create virtual hosts for Nginx. Add a ```site.com``` directory and Vnnpro will automatically respond on:
 
 ```
 site.com
@@ -112,7 +112,7 @@ root:toor
 
 ## How to select the PHP engine
 
-##### A) Explicitly using subdomains
+##### A) Using subdomains
 
 ```
 hhvm.site.com
@@ -120,7 +120,7 @@ php55.site.com
 php70.site.com
 ```
 
-##### B) Explicitly using ports
+##### B) Using ports
 
 ```
 site.com:8000 # hhvm
@@ -220,3 +220,7 @@ xdebug.remote_connect_back = 1
 xdebug.idekey = "PHPSTORM"
 xdebug.remote_port = 9089
 ```
+
+## How to build the image from scratch
+
+See the ```build``` branch.
